@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo One</title>
+    
+</head>
+
+<body>
+    <form class="calculateForm" action="calculate.php" method="POST">
+      <input type="number" id="firstNumber" name="firstNumber" placeholder="Nhap so thu 1">
+      <input type="number" id="secondNumber" name="secondNumber" placeholder="Nhap so thu 2">
+    </form>
+    <br>
+    <button onclick="cong()">Cong</button>
+    <button onclick="tru()">Tru</button>
+    <button onclick="nhan()">Nhan</button>
+    <button onclick="chia()">Chia</button>
+    <br>
+    <h4 id="message"></h4>
+    <script>
+        let firstNumber, secondNumber;
+        let message = document.getElementById('message');
+        function cong() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Ket qua cong = " + (firstNumber + secondNumber);
+        }
+        function tru() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Ket qua tru = " + (firstNumber - secondNumber);
+        }
+        function nhan() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Ket qua nhan = " + (firstNumber * secondNumber);
+        }
+        function chia() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Ket qua chia = " + (firstNumber / secondNumber);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo2</title>
+</head>
+<body>
+    <ol id="student-list">
+        <li id="student-one">
+            <h3>Le Hoang Nam</h3></li>
+        <li id="student-one">
+            <h3>Nguyen Van Manh</h3></li>
+    </ol>
+    <button onclick="deleteStudentOne ()">Delete student 1</button>
+    <button onclick="deleteStudentTwo ()">Delete student 2</button>
+    <button onclick="deleteStudent ()">Delete all</button>
+
+
+    <script>
+        // tim kiem phan tu
+        let studentList = document.getElementById('student-list');
+        let studentOne = document.getElementById('student-one')
+        let studentTwo = document.getElementById('student-two')
+         // ham bat su kien them sv
+         function addStudent(){
+        // tao phan tu moi
+        let liObject = document.createElement('li')
+        // them noi dung cho phan tu moi
+        liObject.innerHTML = "<h3>Dinh Minh Thong</h3>";
+        //them phan tu con
+            studentList.insertBefore(liObject, studentTwo);
+        }
+
+        // xoa phan tu
+        function deleteStudentOne(){
+            studentOne.remove();
+        }
+
+        function deleteStudentTwo(){
+            studentTwo.remove();
+        }
+
+        function deleteStudent(){
+            studentList.remove();
+
+        }
+    </script>
+
+
+</body>
+</html>
