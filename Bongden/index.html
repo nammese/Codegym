@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #status {
+            background-color: black;
+            color: white;
+        }
+        
+        .form-group {
+            padding: 10px;
+        }
+        
+        button {
+            background-color: green;
+            border: 1px solid;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            border-radius: 3rem;
+        }
+        
+        body {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" onsubmit="return false">
+            <div class="form-group">
+                <button id="connecttoLamp" onClick="connectToLamp()">
+            Kết nối với bóng đèn
+          </button>
+            </div>
+            <div class="form-group">
+                <label for="count">Số lần</label>
+                <input type="number" id="count" />
+            </div>
+            <div class="form-group">
+                <button id="turnOnOff" onClick="tatBat10Lan();">
+            Bắt đầu ứng dụng
+          </button>
+            </div>
+
+            <div class="form-group" style="display: flex">
+                <p>Trạng thái :</p>
+                <p id="status">Đang tắt</p>
+            </div>
+        </form>
+    </div>
+    <script>
+        let count = document.getElementById("count");
+        let status = document.getElementById("status");
+        let connecttoLamp = document.getElementById("connecttoLamp");
+    </script>
+    <script src="./ElectricLamp.js"></script>
+    <script src="./SwitchButton.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
